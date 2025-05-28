@@ -9,6 +9,9 @@ export interface IUser extends Document {
   age: number;
   nativeLanguage: string;
   englishProficiency: string;
+  streak: number;
+  lastOpened: Date;
+  xpPoint: number;
   createdAt: Date;
   updatedAt: Date;
 }

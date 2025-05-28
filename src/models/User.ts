@@ -40,6 +40,19 @@ const userSchema = new Schema<IUser>(
       required: [true, 'English proficiency level is required'],
       enum: ['Beginner', 'Intermediate', 'Upper Intermediate'],
       trim: true
+    },
+    streak: {
+      type: Number,
+      default: 0
+    },
+    lastOpened: {
+      type: Date,
+      default: Date.now
+    },
+    xpPoint: {
+      type: Number,
+      default: 0,
+      min: [0, 'XP points cannot be negative']
     }
   },
   {

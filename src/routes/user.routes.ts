@@ -12,5 +12,7 @@ router.post('/analyze-speech',
   uploadAudio.single('audio'), 
   SpeechController.analyzeSpeech
 );
+router.get('/check-streak', authenticate, UserController.checkStreak);
+router.patch('/update', authenticate, UserController.updateUser);
 
 export default router; 
