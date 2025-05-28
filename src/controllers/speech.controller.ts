@@ -63,7 +63,7 @@ export class SpeechController {
       try {
         console.log('Starting Whisper transcription...');
         // Transcribe audio using Whisper
-        //!uncomment this to use whisper
+        //!comment this for not using whisper
         // const transcription = await openai.audio.transcriptions.create({
         //   file: audioFile,
         //   model: "whisper-1",
@@ -78,7 +78,7 @@ export class SpeechController {
         let userMessage = "";
 
         if(type == 'intro'){
-          // !uncomment this
+          // !comment this for not using whisper
           // systemMessage =  `You are an English language learning expert. Analyze the user's speech transcription based on their background. 
           // - Age: ${user.age} 
           // - Native language: ${user.nativeLanguage} 
@@ -197,7 +197,7 @@ export class SpeechController {
         let response;
         // Format the response
         if(type == 'intro'){
-          // !uncomment this
+          // !comment this for not using whisper
           // response = {
           //   transcription: transcription.text,
           //   analysis: analysis.choices[0].message.content,
